@@ -21,39 +21,42 @@ export function FlightInfoCard({ flight }: FlightInfoProps) {
 
     return (
         <div className={styles.card}>
-            {/* Coluna 1: Aeronave */}
-            <div className={styles.column}>
+            {/* Coluna 1: Aeronave (Fica como está, alinhada à esquerda) */}
+            <div className={styles.column}> 
                 <span className={styles.title}>Aeronave</span>
                 <span className={styles.value}>{flight.aeronave}</span>
                 <span className={styles.subtitle}>{flight.companhia}</span>
             </div>
 
-            {/* Coluna 2: Trajeto */}
-      <div className={styles.column}>
-        <span className={styles.title}>Trajeto</span>
+            {/* Coluna 2: Trajeto (ADICIONA a classe .columnCenter) */}
+            <div className={`${styles.column} ${styles.columnCenter}`}> 
+              <span className={styles.title}>Trajeto</span>
 
-        <div className={styles.pathContainer}>
-          <span className={styles.pathAirport}>{flight.origem}</span>
-          <div className={styles.pathLineBox}>
-            <div className={styles.pathDot}></div>
-            <div className={styles.pathLine}></div>
-            <div className={styles.pathDot}></div>
-          </div>
-          <span className={styles.pathAirport}>{flight.destino}</span>
+              {/* 1. LINHA DO VISUAL */}
+              <div className={styles.pathVisual}> 
+                <div className={styles.pathDot}></div>
+                <div className={styles.pathLine}></div>
+                <div className={styles.pathDot}></div>
+              </div>
+
+              {/* 2. LINHA DOS TEXTOS */}
+              <div className={styles.pathAirports}> 
+                <span className={styles.pathAirport}>{flight.origem}</span>
+                <span className={styles.pathAirport}>{flight.destino}</span>
+              </div>
+            </div>
+
+            {/* Coluna 3: Matrícula (ADICIONA a classe .columnCenter) */}
+            <div className={`${styles.column} ${styles.columnCenter}`}>
+              <span className={styles.title}>Matrícula</span>
+              <span className={styles.value}>{flight.registro}</span>
+            </div>
+
+              {/* Coluna 4: Data (ADICIONA a classe .columnCenter) */}
+            <div className={`${styles.column} ${styles.columnCenter}`}>
+                <span className={styles.title}>Data</span>
+                <span className={styles.value}>{formattedDate}</span>
+            </div>
         </div>
-      </div>
-
-      {/* Coluna 3: Matrícula */}
-      <div className={styles.column}>
-        <span className={styles.title}>Matrícula</span>
-        <span className={styles.value}>{flight.registro}</span>
-      </div>
-
-        {/* Coluna 4: Data */}
-        <div className={styles.column}>
-            <span className={styles.title}>Data</span>
-            <span className={styles.value}>{formattedDate}</span>
-        </div>
-    </div>
     );
 }

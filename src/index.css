@@ -4,12 +4,13 @@
   /* Variáveis de cor */
   --color-background: #111111;
   --color-card: #1C1C1C;
-  --color-border: #333333;
+  --color-border: #333333;       /* Esta é a cor da LINHA (cinza-escuro) */
   --color-text-primary: #F5F5F5;
-  --color-text-secundary: #A3A3A3;
+  --color-text-secondary: #A3A3A3; /* <-- CORRIGIDO AQUI (com "o") */
   --color-positive: #00C853;
   --color-negative: #FF4444;
   --color-accent: #00BFFF;
+  --color-path-dot: #F7B731;       /* Esta é a cor do PONTO (amarelo) */
 }
 
 body {

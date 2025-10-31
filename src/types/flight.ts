@@ -4,7 +4,8 @@ export interface FlightSummary {
     aeronave: string;
     companhia: string;
     registro: string;
-    rota: string;
+    origem: string;
+    destino: string;
     saldo: number;
     data: string;
 }
