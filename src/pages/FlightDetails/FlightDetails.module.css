@@ -1,0 +1,115 @@
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  /* CORREÇÃO DE TAMANHO 1: Removemos o font-size daqui */
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+/* CORREÇÃO DE TAMANHO 2: Define o tamanho da seta */
+.nav a svg {
+  font-size: 1.5rem; /* 24px */
+}
+
+.nav a:hover {
+  background-color: var(--color-card);
+}
+
+/* CORREÇÃO DE TAMANHO 3: Define o tamanho do título */
+.nav h1 {
+  font-size: 1.5rem; /* 24px */
+}
+
+/* Seção de Recompensas */
+.rewardsSection {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rewardsSection h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rewardsSection h2 svg {
+  color: var(--color-accent);
+}
+
+.rewardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.rewardItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rewardIcon {
+  font-size: 2.5rem; /* 40px */
+  color: var(--color-accent);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rewardValue {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.rewardTitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.flightInfoSection {
+  background-color: var(--color-card);
+  padding: 1.5rem; 
+  border-radius: 16px; 
+  border: 1px solid var(--color-border);
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem 0;
+  color: var(--color-text-secondary);
+}
+
+span.rewardIcon {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.25rem;
+}

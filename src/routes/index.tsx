@@ -9,7 +9,7 @@ const router = createBrowserRouter([
         element: <FlightsList />,
     },
     {
-        path: '/flights/:id', // Rota para exibir os detalhes de um voo específico
+        path: '/flight/:id', // Rota para exibir os detalhes de um voo específico
         element: <FlightDetails />,
     },
 ]);
