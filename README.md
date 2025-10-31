@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# Projeto: Pilops - Frontend (Teste Técnico)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface frontend do teste técnico da Pilops, construída com React, Vite e TypeScript. Esta aplicação consome uma API backend separada para exibir um histórico de voos, seguindo um design fornecido pelo Figma.
 
-Currently, two official plugins are available:
+## 🔗 Repositório do Backend (Obrigatório)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Este projeto precisa do backend (API) rodando para funcionar.**
+O repositório do backend pode ser encontrado aqui:
+[https://github.com/SEU-USUARIO/pilops-backend](https://github.com/SEU-USUARIO/pilops-backend) 
+*(Lembre-se de trocar pela URL real do seu repositório backend!)*
 
-## React Compiler
+## 🚀 Como Rodar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Backend:** Primeiro, clone, instale e rode o [projeto backend](https://github.com/SEU-USUARIO/pilops-backend) seguindo as instruções do `README.md` dele. A API deve estar rodando em `http://localhost:3001`.
 
-## Expanding the ESLint configuration
+2.  **Frontend:**
+    * Clone este repositório:
+        `git clone [URL_DESTE_REPO_FRONTEND]`
+    * Entre na pasta:
+        `cd pilops-frontend`
+    * Instale as dependências:
+        `npm install`
+    * Rode a aplicação:
+        `npm run dev`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3.  A aplicação estará disponível em `http://localhost:5173`.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **React (com Vite):** Biblioteca principal para a construção da UI.
+* **TypeScript:** Para segurança de tipos e melhor desenvolvimento.
+* **React Router DOM:** Para o roteamento entre as páginas (Lista e Detalhes).
+* **Axios:** Para fazer as chamadas HTTP para a API backend.
+* **React Icons:** Para a iconografia (setas, troféu, ícones de recompensa).
+* **CSS Modules:** Para estilização componentizada e sem conflitos de classes.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 Decisões Técnicas ("Júnior Inteligente")
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* **Componentes Reutilizáveis:** O Header (logo) e o `FlightInfoCard` (bloco de 4 colunas de informação do voo) foram criados em `src/components`. Isso segue o princípio DRY (Don't Repeat Yourself), já que ambos os componentes são usados nas telas de Lista e Detalhes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **Backend First:** Durante o desenvolvimento, foi notado que o design exigia dados (como `companhia` e `registro`) que a API `GET /flights` não fornecia. Em vez de "remendar" o frontend, a API no `pilops-backend` foi corrigida primeiro para prover os dados corretos.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Estilização "Pixel-Perfect":** Foi feito um esforço para replicar fielmente o design do Figma, incluindo o uso de Variáveis CSS (`:root`) em `index.css` para o tema escuro e a implementação do visual do trajeto com CSS Grid e Flexbox puros.
