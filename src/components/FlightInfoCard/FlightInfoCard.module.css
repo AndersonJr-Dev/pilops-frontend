@@ -1,0 +1,62 @@
+.card {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr; 
+  gap: 1.5rem; 
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}    
+
+/* --- Estilos do Visual do Trajeto --- */
+
+.pathContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+  margin-top: 2px; /* Alinha com os outros .value */
+}
+
+.pathAirport {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.pathLineBox {
+  flex: 1; /* Faz este container crescer */
+  display: flex;
+  align-items: center;
+}
+
+.pathDot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-path-dot);
+  border-radius: 50%; /* Transforma em círculo */
+}
+
+.pathLine {
+  flex: 1; 
+  height: 2px;
+  background-color: var(--color-border);
+}
