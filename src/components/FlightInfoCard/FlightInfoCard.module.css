@@ -1,6 +1,6 @@
 .card {
   display: grid;
-  grid-template-columns: 2fr 1.5fr 1fr 1fr; 
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr; 
   gap: 1.5rem; 
   width: 100%;
 }
@@ -25,38 +25,45 @@
 .subtitle {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
-}    
+}
+
+.columnCenter {
+  align-items: center;
+}
 
 /* --- Estilos do Visual do Trajeto --- */
 
-.pathContainer {
+.pathVisual {
+  /* O container da linha e dos pontos */
   display: flex;
   align-items: center;
-  gap: 6px; 
-  margin-top: 2px; /* Alinha com os outros .value */
-}
-
-.pathAirport {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-text-secondary);
-}
-
-.pathLineBox {
-  flex: 1; /* Faz este container crescer */
-  display: flex;
-  align-items: center;
+  margin-top: 2px; /* Pequeno espaço do título */
+  width: 100%;
 }
 
 .pathDot {
   width: 10px;
   height: 10px;
-  background-color: var(--color-path-dot);
-  border-radius: 50%; /* Transforma em círculo */
+  background-color: var(--color-path-dot); 
+  border-radius: 50%; 
 }
 
 .pathLine {
-  flex: 1; 
+  flex: 1; /* Faz a linha crescer */
   height: 2px;
-  background-color: var(--color-border);
+  background-color: var(--color-path-dot);
+}
+
+.pathAirports {
+  /* O container dos textos dos aeroportos */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px; /* Espaço da linha de cima */
+  width: 100%;
+}
+
+.pathAirport {
+  font-size: 0.9rem; /* 14px */
+  font-weight: 600;
+  color: var(--color-text-secondary);
 }
