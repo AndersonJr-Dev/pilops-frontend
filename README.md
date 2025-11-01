@@ -2,20 +2,19 @@
 
 Interface frontend do teste técnico da Pilops, construída com React, Vite e TypeScript. Esta aplicação consome uma API backend separada para exibir um histórico de voos, seguindo um design fornecido pelo Figma.
 
-## 🔗 Repositório do Backend (Obrigatório)
+## Repositório do Backend (Obrigatório)
 
 **Este projeto precisa do backend (API) rodando para funcionar.**
 O repositório do backend pode ser encontrado aqui:
-[https://github.com/SEU-USUARIO/pilops-backend](https://github.com/SEU-USUARIO/pilops-backend) 
-*(Lembre-se de trocar pela URL real do seu repositório backend!)*
+[https://github.com/AndersonJr-Dev/pilops-backend] 
 
-## 🚀 Como Rodar
+## Como Rodar
 
-1.  **Backend:** Primeiro, clone, instale e rode o [projeto backend](https://github.com/SEU-USUARIO/pilops-backend) seguindo as instruções do `README.md` dele. A API deve estar rodando em `http://localhost:3001`.
+1.  **Backend:** Primeiro, clone, instale e rode o **projeto backend** seguindo as instruções do `README.md` dele. A API deve estar rodando em `http://localhost:3001`.
 
 2.  **Frontend:**
     * Clone este repositório:
-        `git clone [URL_DESTE_REPO_FRONTEND]`
+        `git clone [https://github.com/AndersonJr-Dev/pilops-frontend]`
     * Entre na pasta:
         `cd pilops-frontend`
     * Instale as dependências:
@@ -25,7 +24,7 @@ O repositório do backend pode ser encontrado aqui:
 
 3.  A aplicação estará disponível em `http://localhost:5173`.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **React (com Vite):** Biblioteca principal para a construção da UI.
 * **TypeScript:** Para segurança de tipos e melhor desenvolvimento.
@@ -34,7 +33,7 @@ O repositório do backend pode ser encontrado aqui:
 * **React Icons:** Para a iconografia (setas, troféu, ícones de recompensa).
 * **CSS Modules:** Para estilização componentizada e sem conflitos de classes.
 
-## 📝 Decisões Técnicas ("Júnior Inteligente")
+## Decisões Técnicas
 
 * **Componentes Reutilizáveis:** O Header (logo) e o `FlightInfoCard` (bloco de 4 colunas de informação do voo) foram criados em `src/components`. Isso segue o princípio DRY (Don't Repeat Yourself), já que ambos os componentes são usados nas telas de Lista e Detalhes.
 
