@@ -10,8 +10,6 @@ import { FlightInfoCard } from '../../components/FlightInfoCard';
 
 // Importa os ícones
 import { FaArrowLeft, FaTrophy } from 'react-icons/fa';
-// CORREÇÃO DE ÍCONE: Importa os ícones CHEIOS (filled) do Bootstrap
-import { BsFillStarFill, BsFillPatchCheckFill } from 'react-icons/bs'; 
 
 export function FlightDetails() {
   const { id } = useParams<{ id: string }>(); 
@@ -75,8 +73,7 @@ export function FlightDetails() {
           </div>
 
           <div className={styles.rewardItem}>
-            {/* CORREÇÃO DE ÍCONE 1: Usando a estrela CHEIA */}
-            <BsFillStarFill className={styles.rewardIcon} /> 
+            <img src="/star.svg" alt="Ícone de estrela" className={styles.rewardIcon} />
             <div>
               <span className={styles.rewardTitle}>XP CONQUISTADO</span>
               <div className={styles.rewardValue}>{flight.xp}</div>
@@ -84,8 +81,7 @@ export function FlightDetails() {
           </div>
 
           <div className={styles.rewardItem}>
-            {/* CORREÇÃO DE ÍCONE 2: Usando o selo CHEIO */}
-            <BsFillPatchCheckFill className={styles.rewardIcon} /> 
+            <img src="/award-star.svg" alt="Ícone de certificado" className={styles.rewardIcon} />
             <div>
               <span className={styles.rewardTitle}>Bônus de missão</span>
               <div className={styles.rewardValue}>{flight.bonusMissao * 100}%</div>
