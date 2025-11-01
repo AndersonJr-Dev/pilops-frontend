@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const BASE_URL = import.meta.env.VITE_API_URL || "https://pilops-backend-rntt.onrender.com";
+
 export const api = axios.create({
-    baseURL: 'http://localhost:3001',
+  baseURL: BASE_URL,
 });
