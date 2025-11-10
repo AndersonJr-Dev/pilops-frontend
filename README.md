@@ -2,6 +2,8 @@
 
 Interface frontend do teste técnico da Pilops, construída com React, Vite e TypeScript. Esta aplicação consome uma API backend separada para exibir um histórico de voos, seguindo um design fornecido pelo Figma.
 
+## Site funcional hospedado na vercel: [https://pilops-frontend.vercel.app]
+
 ## Repositório do Backend (Obrigatório)
 
 **Este projeto precisa do backend (API) rodando para funcionar.**

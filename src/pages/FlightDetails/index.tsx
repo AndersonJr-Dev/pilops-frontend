@@ -8,9 +8,6 @@ import styles from './FlightDetails.module.css';
 import { Header } from '../../components/Header';
 import { FlightInfoCard } from '../../components/FlightInfoCard';
 
-// Importa os ícones
-import { FaArrowLeft, FaTrophy } from 'react-icons/fa';
-
 export function FlightDetails() {
   const { id } = useParams<{ id: string }>(); 
   const [flight, setFlight] = useState<FlightDetailsType | null>(null);
@@ -54,18 +51,18 @@ export function FlightDetails() {
       <Header /> 
 
       <nav className={styles.nav}>
-        <Link to="/">
-          <FaArrowLeft />
+        <Link to="/" aria-label="Voltar">
+          <img src="/symbols_arrow-back-ios.svg" alt="Voltar" />
         </Link>
         <h1>Detalhes do voo</h1>
       </nav>
 
       <section className={styles.rewardsSection}>
-        <h2><FaTrophy /> Recompensas</h2>
+        <h2><img src="/symbols_trophy.svg" alt="Troféu" /> Recompensas</h2>
         <div className={styles.rewardsGrid}>
 
           <div className={styles.rewardItem}>
-            <span className={styles.rewardIcon}>P$</span> 
+            <img src="/Frame-89.svg" alt="Ganhos totais" className={styles.rewardIcon} />
             <div>
               <span className={styles.rewardTitle}>Ganhos totais</span>
               <div className={styles.rewardValue}>{formattedBalance}</div>
