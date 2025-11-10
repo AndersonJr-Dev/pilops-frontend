@@ -9,7 +9,6 @@
   align-items: center;
   gap: 1rem;
   margin: 2rem 0;
-  /* CORREÇÃO DE TAMANHO 1: Removemos o font-size daqui */
   font-weight: 700;
   color: var(--color-text-primary);
 }
@@ -22,16 +21,15 @@
   transition: background-color 0.2s;
 }
 
-/* CORREÇÃO DE TAMANHO 2: Define o tamanho da seta */
-.nav a svg {
-  font-size: 1.5rem; /* 24px */
+.nav a img {
+  width: 24px;
+  height: 24px;
 }
 
 .nav a:hover {
   background-color: var(--color-card);
 }
 
-/* CORREÇÃO DE TAMANHO 3: Define o tamanho do título */
 .nav h1 {
   font-size: 1.5rem; /* 24px */
 }
@@ -55,8 +53,9 @@
   gap: 0.5rem;
 }
 
-.rewardsSection h2 svg {
-  color: var(--color-accent);
+.rewardsSection h2 img {
+  width: 16px;
+  height: 16px;
 }
 
 .rewardsGrid {
